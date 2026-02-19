@@ -164,7 +164,7 @@ enum ClonableMacroError: Error, CustomStringConvertible {
         case .onlyApplicableToStruct:
             return "@Clonable can only be applied to struct"
         case .invalidExtension:
-            return "无法生成 extension"
+            return "Cannot generate extension"
         }
     }
 }
