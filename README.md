@@ -18,7 +18,7 @@ Add SwiftClonable to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/xiaoli-white/swift-clonable.git", from: "1.0.1")
+    .package(url: "https://github.com/xiaoli-white/swift-clonable.git", from: "1.0.2")
 ]
 ```
 
@@ -44,7 +44,7 @@ let cloned = person.clone()
 
 ### Deep vs Shallow Cloning
 
-By default, `@Clonable` performs deep cloning. You can customize the cloning strategy for individual properties using the `@Clone` attribute:
+By default, `@Clonable` performs shallow cloning. You can customize the cloning strategy for individual properties using the `@Clone` attribute:
 
 ```swift
 @Clonable
@@ -59,8 +59,8 @@ struct User {
 
 ### Cloning Strategy
 
-- `.deep` (default): Recursively clones all nested objects
-- `.shallow`: Creates a shallow copy (reference type properties are not cloned)
+- `.deep`: Recursively clones all nested objects
+- `.shallow` (default): Creates a shallow copy (reference type properties are not cloned)
 
 ### Built-in Types
 

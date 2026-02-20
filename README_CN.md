@@ -18,7 +18,7 @@ SwiftClonable 是一个 Swift 包，通过宏为结构体自动生成 `clone()` 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/xiaoli-white/swift-clonable.git", from: "1.0.1")
+    .package(url: "https://github.com/xiaoli-white/swift-clonable.git", from: "1.0.2")
 ]
 ```
 
@@ -44,7 +44,7 @@ let cloned = person.clone()
 
 ### 深度克隆与浅度克隆
 
-默认情况下，`@Clonable` 执行深度克隆。您可以使用 `@Clone` 属性为单个属性自定义克隆策略：
+默认情况下，`@Clonable` 执行浅克隆。您可以使用 `@Clone` 属性为单个属性自定义克隆策略：
 
 ```swift
 @Clonable
@@ -59,8 +59,8 @@ struct User {
 
 ### 克隆策略
 
-- `.deep`（默认）：递归克隆所有嵌套对象
-- `.shallow`：创建浅拷贝（引用类型属性不会被克隆）
+- `.deep`：递归克隆所有嵌套对象
+- `.shallow`（默认）：创建浅拷贝（引用类型属性不会被克隆）
 
 ### 内置类型
 

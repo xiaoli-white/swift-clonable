@@ -82,7 +82,7 @@ public struct ClonableMacro: ExtensionMacro {
                     }
                 }
             }
-            return .deep
+            return .shallow
         }
         return .shallow
     }
