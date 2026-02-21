@@ -10,7 +10,7 @@ public macro Clonable(autoClone: Bool = true) =
     )
 
 @attached(peer)
-public macro Clone(strategy: CloneStrategy = .deep) =
+public macro Clone(strategy: CloneStrategy = .shallow) =
     #externalMacro(
         module: "SwiftClonableMacros",
         type: "CloneMacro"

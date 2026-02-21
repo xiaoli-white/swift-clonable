@@ -18,7 +18,7 @@ SwiftClonable 是一个 Swift 包，通过宏为结构体自动生成 `clone()` 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/xiaoli-white/swift-clonable.git", from: "1.0.2")
+    .package(url: "https://github.com/xiaoli-white/swift-clonable.git", from: "1.0.3")
 ]
 ```
 
