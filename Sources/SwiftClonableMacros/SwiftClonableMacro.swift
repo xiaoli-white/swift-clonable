@@ -172,6 +172,7 @@ enum ClonableMacroError: Error, CustomStringConvertible {
 @main
 struct SwiftClonablePlugin: CompilerPlugin {
     let providingMacros: [Macro.Type] = [
-        ClonableMacro.self
+        ClonableMacro.self,
+        CloneMacro.self
     ]
 }
